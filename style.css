@@ -130,6 +130,7 @@ select{
     border: none;
     outline: none;
     color: #777;
+    background-color: white !important;
 }
 
 
