@@ -38,7 +38,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 30px;
+    padding: 20px 0;
     margin: 0;
     background: linear-gradient(180deg, rgba(139, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 92%);
 }
@@ -63,6 +63,7 @@ body{
 .contentOfPage .content form input[type="tel"],
 .contentOfPage .content form input[type="password"]{
     direction: rtl;
+    width: 100%;
     outline: none;
     padding: 10px 25px;
     padding-right: 60px;
