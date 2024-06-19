@@ -60,7 +60,8 @@ body{
     padding: 20px 30px;
     border-radius: 12px;
 }
-.contentOfPage .content form input[type="tel"]{
+.contentOfPage .content form input[type="tel"],
+.contentOfPage .content form input[type="password"]{
     width: 250px;
     direction: rtl;
     outline: none;
@@ -78,22 +79,22 @@ body{
 @media (max-width: 567px) {
     .inputcont{
         flex-direction: column;
-        margin-bottom: 30px;
         gap: 0;
     }
 }
 
 .contentOfPage .content form input[type="tel"]:first-of-type{
     display: block;
-    margin-bottom: 20px;
     width: 100%;
 }
 .inputdiv{
     position: relative;
     display: flex;
+    margin-bottom: 30px;
 }
 .inputdiv span{
     display: flex;
+    height: 100%;
     align-items: center;
     justify-content: center;
     background-color: #8b0000;
