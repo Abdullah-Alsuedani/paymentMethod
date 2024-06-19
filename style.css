@@ -62,7 +62,6 @@ body{
 }
 .contentOfPage .content form input[type="tel"],
 .contentOfPage .content form input[type="password"]{
-    width: 250px;
     direction: rtl;
     outline: none;
     padding: 10px 25px;
