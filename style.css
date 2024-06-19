@@ -186,3 +186,7 @@ select{
 .icon i{
     font-size: 38px;
 }
+
+.done p {
+    text-align: center;
+}
