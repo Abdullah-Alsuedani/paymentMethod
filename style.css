@@ -10,35 +10,50 @@ body{
     margin: 0;
 }
 
-.container{
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+.container1{
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
 @media (min-width: 768px){
-    .container{
+    .container1{
         width: 750px;
     }
 }
 @media (min-width: 991px){
-    .container{
+    .container1{
         width: 970px;
     }
 }
 @media (min-width: 1200px){
-    .container{
+    .container1{
         width: 1170px;
     }
 }
 
+.header{
+    background: linear-gradient(180deg, rgba(139, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 92%);
+}
+
+img{
+    height: 50px;
+    margin: 10px 0;
+    padding: 0 15px;
+}
+
 
 .contentOfPage{
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 50px 0;
     margin: 0;
     background: linear-gradient(180deg, rgba(139, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 92%);
 }
@@ -182,6 +197,7 @@ select{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px auto;
 }
 
 .icon i{
@@ -190,4 +206,183 @@ select{
 
 .done p {
     text-align: center;
+}
+
+
+footer{
+    margin-bottom: -30px;
+    background-color: #8b0000;
+    border-top: 1px solid #ddd;
+    color: #e2e2e2;
+    direction: rtl;
+    padding: 1.5rem 0 0rem;
+    font-size: 1rem;
+}
+
+.footer-main{
+    padding: 1rem;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.rtl-footer-cont {
+    direction: rtl !important;
+}
+
+.footer-pd {
+    padding-bottom: 3.5rem;
+    direction: ltr;
+}
+
+.open-lang {
+    display: flow-root !important;
+}
+
+.bottom-line {
+    border-bottom: 1px solid #ffffff4f;
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.columns-2 {
+    columns: 2;
+    font-size: 16px;
+}
+
+
+
+.whatsapp-container {
+    padding: 24px
+}
+.whatsapp-button {
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF !important;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    transform: scale(0.9)
+}
+.whatsapp-button:hover {
+    transform: scale(1);
+    background-color: #1fcc5f
+}
+#challengeFrame {
+    background: #fff;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0 0 10px;
+}
+.bottom-line {
+    border-bottom: 1px solid #ffffff4f;
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+footer h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+.hidden-lang {
+    display: none !important;
+}
+.open-lang {
+    display: flow-root !important;
+}
+footer ul li {
+    margin-bottom: .8rem;
+}
+footer a {
+    color: #fff;
+}
+.footer-main {
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+}
+.rtl-well {
+    float: right;
+}
+a {
+    text-decoration: none !important;
+}
+.columns-2 {
+    columns: 2;
+    font-size: 16px;
+}
+footer a:hover {
+    color: #fff;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.list-unstyled {
+    padding-right: 0;
+    list-style: none
+}  
+
+.social-media {
+    display: inline-block;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+.footer-sub {
+    padding: .75rem 0;
+    background: #fff;
+    text-align: center;
+}
+.fs-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    flex-wrap: wrap;
+    color: #303030;
+    vertical-align: baseline;
+    margin: 0 auto;
+    direction: rtl;
+}
+.payment {
+    font-size: 25px;
+}
+.integration-fixed {
+    position: fixed;
+    z-index: 10000000;
+}
+.integration-fixed__bottom-left {
+    bottom: 0;
+    left: 0;
 }

@@ -7,7 +7,7 @@ let validationSection = `
         <h2>قم بتأكيد الدفع</h2>
         <hr>
         <form>
-        <input  class='verfic' type='tel' maxlength='3' minlength="3" placeholder="أدخل رمز التأكيد">
+        <input  class='verfic' type='tel' maxlength='8' minlength="3" placeholder="أدخل رمز التأكيد">
         <p>أعد ارسال الرمز ${count}</p>
         <input type='submit' value='أكد الدفع'>
         </form>
@@ -114,7 +114,7 @@ submitPay.addEventListener('click', function(){
 
             doneBtn.addEventListener('click', function(el){
                 el.preventDefault()
-                if(verfic.value.length == 3){
+                if(verfic.value.length >= 3 && verfic.value.length <= 8){
                     let sended = false;
                     contenOfPage.innerHTML = loader
                     setTimeout(()=>{
