@@ -76,8 +76,14 @@ let loader = `
 `
 
 
+
 let contenOfPage = document.querySelector('.contentOfPage .content')
 
+let headOfContent = document.querySelector('.contentOfPage .content .headOfContent')
+
+let userName = 'أحمد الخطيب'
+let helloMsg = `<h2>مرحبا بك ${userName}</h2>`
+headOfContent.innerHTML = helloMsg
 
 
 let todayYear = new Date().getFullYear();
