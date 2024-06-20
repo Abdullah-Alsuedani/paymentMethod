@@ -95,14 +95,18 @@ let Money = document.querySelector('.money')
 let hiBtn = document.querySelector('.hiBtn')
 
 
-Money.addEventListener('input', function(){
-    if(isNaN(Number(Money.value))){
-        Money.value = Money.value.slice(0,-1);
-    }else{
-        Money.value = Money.value
-    }
-})
+function valid(el){
+    el.addEventListener('input', function(){
+        if(isNaN(Number(el.value))){
+            el.value = el.value.slice(0,-1);
+        }else{
+            el.value = el.value
+        }
+    })
+}
 
+
+valid(Money)
 
 hiBtn.addEventListener('click', function(){
         if(Money.value.length > 0){
@@ -114,115 +118,35 @@ hiBtn.addEventListener('click', function(){
             let submitPay = document.querySelector('.submitPay')
             let cardNumber = document.querySelector('.cardNumber')
             let cardCvv = document.querySelector('.cvv')
-            cardNumber.addEventListener('input', function(){
-                if(isNaN(Number(cardNumber.value))){
-                    cardNumber.value = cardNumber.value.slice(0,-1);
-                }else{
-                    cardNumber.value = cardNumber.value
-                }
-            })
-            
-            
-            cardCvv.addEventListener('input', function(){
-                if(isNaN(Number(cardCvv.value))){
-                    cardCvv.value = cardCvv.value.slice(0,-1);
-                }else{
-                    cardCvv.value = cardCvv.value
-                }
-            })
+
+
+            valid(cardNumber);
+            valid(cardCvv);
+
 
             submitPay.addEventListener('click', function(el){
                 el.preventDefault()
                 if(cardNumber.value.length == 16 && cardCvv.value.length == 3){
-                    if(Number(dateYear.value) == todayYear && Number(dateMonth.value) > todayMonth){
+                    if(Number(dateYear.value) == todayYear && Number(dateMonth.value) > todayMonth || Number(dateYear.value) > todayYear){
                         contenOfPage.innerHTML = loader
             
                         setTimeout(() => {
                             contenOfPage.innerHTML = validationSection
+                            let verfic = document.querySelector('.verfic')
+                            valid(verfic)
                             let resend = document.querySelector('.validation p') 
-                            let myInterval = setInterval(function(){
-                            count--
-                            resend.innerHTML = `أعد ارسال الرمز ${count}`
-                            if(count == 0){
-                                clearInterval(myInterval)
-                                resend.style.color = "#8b0000"
-                                }
-                            }, 1000)
+                                    let myInterval = setInterval(function(){
+                                    count--
+                                    resend.innerHTML = `أعد ارسال الرمز ${count}`
+                                    if(count == 0){
+                                        clearInterval(myInterval)
+                                        resend.style.color = "#8b0000"
+                                        }
+                                    }, 1000)
+                            
                                 setTimeout(() => {
                 
-                                    let verfic = document.querySelector('.verfic')
-                                    
-                                    verfic.addEventListener('input', function(){
-                                        if(isNaN(Number(verfic.value))){
-                                            verfic.value = verfic.value.slice(0,-1);
-                                        }else{
-                                            verfic.value = verfic.value
-                                        }
-                                    })
-                        
-                                    let doneBtn = document.querySelector('.validation input[type="submit"]')
-                        
-                                    doneBtn.addEventListener('click', function(el){
-                                        el.preventDefault()
-                                        if(verfic.value.length >= 3 && verfic.value.length <= 8){
-                                            let sended = false;
-                                            contenOfPage.innerHTML = loader
-                                            setTimeout(()=>{
-                                                if(sended){
-                                                    contenOfPage.innerHTML = `
-                                                            <div class='done'>
-                                                                <div class='icon'>
-                                                                    <i class="fa-solid fa-check"></i>
-                                                                </div>
-                                                                <p>تمت العملية بنجاح</p>
-                                                            </div>
-                                                    `
-                                                    document.querySelector(".icon").style.borderColor = '#97e010'
-                                                    document.querySelector('.icon i').style.color = '#97e010'
-                                                }else{
-                                                    contenOfPage.innerHTML = `
-                                                    <div class='done'>
-                                                        <div class='icon'>
-                                                            <i class="fa-solid fa-x"></i>
-                                                        </div>
-                                                        <p>لم تتم العملية بنجاح</p>
-                                                    </div>
-                                            `
-                                                document.querySelector(".icon").style.borderColor = '#8b0000'
-                                                document.querySelector('.icon i').style.color = '#8b0000'
-                                                }
-                                            }, 3000)
-                                        }else{
-                                            alert('أدخل كود صحيح')
-                                        }
-                                    })
-                        
-                            }, 3000);
-                        }, 3000);
-                    }else if(Number(dateYear.value) > todayYear){
-                        contenOfPage.innerHTML = loader
-                        setTimeout(() => {
-                            contenOfPage.innerHTML = validationSection
-                            let resend = document.querySelector('.validation p') 
-                            let myInterval = setInterval(function(){
-                            count--
-                            resend.innerHTML = `أعد ارسال الرمز ${count}`
-                            if(count == 0){
-                                clearInterval(myInterval)
-                                resend.style.color = "#8b0000"
-                                }
-                            }, 1000)
-                                setTimeout(() => {
-                
-                                    let verfic = document.querySelector('.verfic')
-                                    
-                                    verfic.addEventListener('input', function(){
-                                        if(isNaN(Number(verfic.value))){
-                                            verfic.value = verfic.value.slice(0,-1);
-                                        }else{
-                                            verfic.value = verfic.value
-                                        }
-                                    })
+
                         
                                     let doneBtn = document.querySelector('.validation input[type="submit"]')
                         
